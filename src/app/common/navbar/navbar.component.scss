@@ -1,0 +1,100 @@
+// Variables Names
+// ==============================================================================
+
+@import '../../../constants.scss';
+
+// ==============================================================================
+
+.navWrapper{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100vh;
+    header{
+        display: flex;
+        justify-content: center;
+        .logo {
+            text-decoration: none;
+            padding: 10px 10px;
+            margin-top: 10px;
+            font-size: 51px;
+            text-align: center;
+            color: $primayColor;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .navOptions{
+        ul, li{
+            margin: 0px;
+            padding: 0px;
+            a{
+                text-decoration: none;
+            }
+        }
+        li{
+            a.active{
+                border-left-color: $primayColor;
+            }
+        }
+        li{
+            list-style: none;
+            border-radius: 5px;
+            @include transition(0.3s);
+            &:hover{
+                background: $primayColor;
+            }
+            a{
+                padding: 20px 0px;
+                border-left: 4px solid transparent;
+                display: flex;
+                font-size: 32px;
+                color: $primaytext;
+                justify-content: center;
+            }
+        }
+    }
+    footer{
+        ul, li{
+            margin: 0px;
+            padding: 0px;
+        }
+        li.active{
+            a {
+                background: $primayColor;
+            }
+        }
+        li{
+            list-style: none;
+            border-radius: 5px;
+            padding: 20px 0px;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            &:hover{
+                a {
+                    background: $primayColor;
+                    &.menu{
+                        @include rotate(90deg);
+                    }
+                }
+            }
+            a{
+                display: inline-block !important;
+                font-size: 32px;
+                color: $primaytext;
+                justify-content: center;
+                text-decoration: none;
+                @include transition(0.2s);
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+// ==============================================================================

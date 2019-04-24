@@ -1,0 +1,19 @@
+<section class="ripperWrapper">
+	<div class="container-fuild">
+    	<div class="row justify-content-md-center">
+			<div class="col-lg-10">
+				<div class="container-fuild">
+					<div class="row ">
+						<article class="title col-md-12 ">
+							<header>Pay Loans & Benifits</header>
+						</article>
+						<div class="col-lg-6" *ngFor="let service of services">
+							<app-loan-box [data]="service"></app-loan-box>
+						</div>
+					</div>
+						
+				</div>
+			</div>
+    	</div>
+	</div>
+</section>

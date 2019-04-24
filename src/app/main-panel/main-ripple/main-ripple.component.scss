@@ -1,0 +1,20 @@
+// Variables Names
+// ==============================================================================
+
+@import '../../../constants.scss';
+
+// ==============================================================================
+:host{
+    
+    .ripperWrapper{
+        padding-bottom: 20px;
+        .title{
+            margin: 7px 0px;
+            header{
+                font-size: 40px;
+                color: $primaytext;
+            }
+            margin-bottom: 20px;
+        }
+    }
+}

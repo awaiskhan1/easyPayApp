@@ -1,0 +1,118 @@
+// Variables Names
+// ==============================================================================
+@import '../../../constants.scss';
+
+// ==============================================================================
+
+.transactionList{
+    .list{
+        header{
+            font-size: 22px;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            margin-bottom: 7px;
+            border-bottom: 1px solid #efefef;
+            i{
+                margin-right: 5px;
+                color: $primayColor;
+            }
+        }
+        ul{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            margin-bottom: 15px;
+            li{
+                display: flex;
+                font-size: 18px;
+                padding: 10px 10px;
+                border-radius: 5px;
+                justify-content: space-between;
+                @extend .popupHoverEffect;
+                @extend .bgChangeHover;
+                @include transition(0.3s);
+                &:hover{
+                    .date{
+                        color:$primaytext;
+                    }
+                }
+                .date{
+                    color:#ccc;
+                    @include transition(0.3s);
+                }
+                .text{
+                    color: $primaytext;
+                    font-weight: 600;
+                }
+                .amount{
+                    color: $primaryGreen;
+                    font-weight: 600;
+                    &.error{
+                        color: $primaryRed;
+                    }
+                }
+            }
+        }
+        footer{
+            text-align: center;
+            box-shadow: 4px -27px 18px #fff;
+            position: relative;
+            z-index: 12;
+            margin-top: -9px;
+            margin-bottom: 40px;
+            .footerBtn{
+                min-width: 80%;
+                line-height: 60px;
+                border-radius: 50px;
+                font-size: 20px;
+                background: transparent;
+				color: $primaytext;
+				border-color: $primayColor;
+				padding: 4px 10px;
+				@include transition(0.3s);
+				@extend .bgChangeHover;
+            }
+        }
+        .subWrapper{
+            height: calc(100vh - 174px);
+            overflow-y: auto;
+            padding-left: 10px;
+            padding-right: 20px;
+            &::-webkit-scrollbar-track{
+                -webkit-box-shadow: none !important;
+                border-radius: 10px;
+                background-color: transparent !important;
+            }
+            &::-webkit-scrollbar{
+                width: 12px;
+                background-color:  transparent !important;
+            }
+    
+            &::-webkit-scrollbar-thumb{
+                border-radius: 10px;
+                -webkit-box-shadow: none !important;
+                background-color: $primayColor !important;
+            }
+        }
+    }
+    .headerWrapper{
+        margin: 20px 0px 30px 0px;
+        h2{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            font-size: 28px;
+            color: $primaytext;
+            margin:0px;
+            font-weight: bold;
+            .recent{
+                i{
+                    margin-right: 5px;
+                }
+            }
+            .icon{
+
+            }
+        }
+    }
+}

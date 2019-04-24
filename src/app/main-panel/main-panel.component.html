@@ -1,0 +1,34 @@
+<section class="mainWrapper">
+	<article class="navWrapper">
+		<app-navbar></app-navbar>
+	</article>
+	<article class="workWrapper">
+		<!--  -->
+		<section class="suboardWrapper">
+			<div class="container-fluid">
+				<div class="row justify-content-md-center">
+					<div class=" suboardInnerWrapper" [ngClass]="{
+						'col-lg-7': !sizeReducer,
+						'col-lg-9': sizeReducer
+						}"  >
+						<router-outlet></router-outlet>
+					</div>
+
+					<div class=" padRight padLeft" [ngClass]="{
+						'col-lg-5': !sizeReducer,
+						'col-lg-3': sizeReducer
+					}">
+						<div class="tansitionList">
+							<app-balance-header></app-balance-header>
+							<app-transaction-list></app-transaction-list>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</article>
+</section>
+
+<!-- -->
+
+<!--  -->

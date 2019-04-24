@@ -1,0 +1,50 @@
+<section class="container-fuild">
+	<article class="headerSearch">
+		<div class="headerTitle">
+			<h3><i class="fab fa-gripfire"></i> Projects</h3>
+			<div class="rightSection">
+				<span class="searchBox">
+					<input type="text" matInput placeholder="search">
+					<i class="fas fa-search"></i>
+				</span>
+				<button mat-stroked-button (click)="addProjectDailog()">Add More</button>
+			</div>
+		</div>
+	</article>
+	<div class="background-activity">
+		<ul>
+			<li *ngFor="let project  of projects">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="sub-wraper">
+							<div class="icon-activity">
+								<i class="fab {{paymentType[project.payType]}}"></i>
+							</div>
+							<div class="sub-text">
+								<span>{{project.name}}</span>
+								<p>{{project.discription}}</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="wraper-active">
+							<div class="active-position">
+								<div class="icon-active" [ngClass]="{'error': project.status == 'error'}">
+									<i class="fas fa-circle"></i>
+									<h2>{{project.status}}</h2>
+								</div>
+
+							</div>
+							<div class="statics">
+								<div class="sub-statics">
+									<i class="fas fa-sliders-h"></i>
+									<i class="far fa-chart-bar"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>

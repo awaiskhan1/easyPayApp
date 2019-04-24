@@ -1,0 +1,93 @@
+
+$leftBarWidth: 80px;
+
+// ==============================================================================
+//
+// Size
+//
+// ==============================================================================
+
+// ==============================================================================
+//
+// Colors
+//
+// ==============================================================================
+
+// $primayColor: #fff13d;
+$primayColor: #ffd234;
+$primaytext: #333;
+$primaryWhite: #fff;
+$primaryGreen: #08ac08;
+$primaryRed: #f30;
+$primaryLight: #aaa;
+
+
+// ==============================================================================
+//
+// maxing
+//
+// ==============================================================================
+
+@mixin transition($time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: all $time $how;
+    -moz-transition:    all $time $how;
+    -ms-transition:     all $time $how;
+    -o-transition:      all $time $how;
+    transition:         all $time $how;
+}
+
+
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+.shadow{
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.popupHoverEffect {
+    &:hover{
+        -webkit-transform: translateY(-4px) scale(1.02);
+        -moz-transform: translateY(-4px) scale(1.02);
+        -ms-transform: translateY(-4px) scale(1.02);
+        -o-transform: translateY(-4px) scale(1.02);
+        transform: translateY(-4px) scale(1.02);
+        -webkit-box-shadow: 0 5px 10px rgba(62,57,107,.2);
+        box-shadow: 0 5px 10px rgba(62,57,107,.2);
+        z-index: 999;
+    }
+}
+.bgChangeHover {
+    &:hover {
+        background: $primayColor;
+    }
+}
+
+.input {
+    background: transparent;
+    border: 0px;
+    line-height: 45px;
+    border-bottom: 1px solid #c8c7c4;
+    position: relative;
+    color: $primaytext;
+    @include transition(0.3s);
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        border-color:  $primayColor;
+    }
+    &::placeholder {
+        color: $primaytext;
+        opacity: 0.5;
+    }
+}
+
+.padLeft{
+    padding-left: 0px !important;
+}
+.padRight{
+    padding-right: 0px !important;
+}

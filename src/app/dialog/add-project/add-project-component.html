@@ -1,0 +1,66 @@
+<section class="wrapper">
+	<h2 class="title"><i class="fab fa-gripfire"></i> Add a Project </h2>
+	<div class="project-container">
+
+		<mat-form-field class="example-full-width">
+			<input class="adjustment" [(ngModel)]="projectName" matInput placeholder="Title">
+		</mat-form-field>
+		<mat-form-field class="example-full-width">
+			<textarea [(ngModel)]="projectDiscription" matInput placeholder="Discription"></textarea>
+		</mat-form-field>
+		<article class="check-wrap">
+			<section class="active-disavctive">
+				<div class="label-adjust">
+					<label class="example-margin">Status:</label>
+				</div>
+				<mat-radio-group [(ngModel)]="status">
+					<mat-radio-button class="example-margin" value="active">
+					Active
+					</mat-radio-button>
+					<mat-radio-button class="example-margin" value="deactive">
+					Disactive
+					</mat-radio-button>
+				</mat-radio-group>
+			</section>
+			<section class="active-disavctive">
+				<div class="label-adust">
+					<label class="example-margin">PayType</label>
+				</div>
+				<mat-radio-group [(ngModel)]="payType">
+					<mat-radio-button  value="bankPay">
+					BankPay
+					</mat-radio-button>
+					<mat-radio-button  value="amazonPay">
+					AmazonPay
+					</mat-radio-button>
+					<mat-radio-button  value="pocketPay">
+					PocketPay
+					</mat-radio-button>
+					<mat-radio-button  value="ebayPay">
+					EbayPay
+					</mat-radio-button>
+				</mat-radio-group>
+			</section>
+		</article>
+		
+		
+
+		<mat-form-field class="example-full-width">
+			<input [(ngModel)]="projectAmount" matInput placeholder="Ammount">
+		</mat-form-field>
+		<mat-form-field class="example-full-width">
+			<input [(ngModel)]="projectTransiction" matInput placeholder="Transictiontype">
+		</mat-form-field>
+		<mat-form-field class="example-full-width">
+			<input [(ngModel)]="projectBankbranch" matInput placeholder="Bankbranch">
+		</mat-form-field>
+
+		<section class="btn-section">
+				<button mat-raised-button (click)="submit()" color="primary">Add</button>
+				<button mat-raised-button  (click)="clear()" color="primary">Clear</button>
+				<button mat-raised-button  (click)="close()" color="primary">Cancel</button>
+		</section>
+
+	</div>
+
+</section>

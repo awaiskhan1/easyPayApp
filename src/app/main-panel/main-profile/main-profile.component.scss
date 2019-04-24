@@ -1,0 +1,259 @@
+// Variables Names
+// ==============================================================================
+
+@import '../../../constants.scss';
+
+// ==============================================================================
+:host {
+    .title{
+        margin: 7px 0px;
+        header{
+            font-size: 40px;
+            color: $primaytext;
+        }
+    }
+    ::ng-deep mat-form-field {
+        width: 48%;
+        margin: 10px 15px 10px 0px;
+
+    }
+    ::ng-deep .mat-form-field-underline{
+		background:  #f5f5f4 !important;
+    } 
+    ::ng-deep .mat-form-field-ripple {
+		background-color: $primayColor !important;
+    }
+    ::ng-deep mat-form-field {
+		// color: $primaytext !important;
+		// background: #e4e4e4;
+		border-radius: 4px;
+		.mat-form-field-label{
+			//color: $primaytext !important;
+			color: $primaytext !important;
+        }
+    }
+    ::ng-deep mat-tab-group{
+        .mat-tab-header{
+            background:  $primaytext;
+            .mat-tab-label{
+                height: 65px !important;
+            }
+            .mat-tab-label-active{
+                background: #ffd234;
+                opacity: 1;
+            }
+            .mat-tab-label-content{
+                i {
+                    margin-right: 5px;
+                    font-size: 16px;
+                }
+                color:  #fff!important;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            
+        }
+    }
+    ::ng-deep mat-ink-ba r{
+        &.mat-ink-bar {
+            background: $primayColor;
+            color: $primaytext;
+        }
+    }
+    .mat-elevation-z8{
+        box-shadow: none !important;
+    }
+    ::ng-deep mat-select{
+
+        .mat-select-value, .mat-select-arrow{
+            color: $primaytext !important;
+        }
+        
+    }
+    ::ng-deep mat-option{
+        .mat-option-text{
+            color: $primayColor !important;
+        }
+    }
+}
+.user-section {
+    background: $primaytext;
+    border-radius: 4px;
+    padding: 20px 0px 0px 0px;
+    @extend .shadow;
+    text-align: center;
+    h2 {
+        font-size: 30px;
+        margin: 0px;
+        color: $primaryWhite;
+        padding: 10px 0px ;
+    }
+    h3 {
+        font-size: 18px;
+        margin: 0px;
+        color: $primaryWhite;
+    }
+    .user-img-section {
+        padding: 30px 0px 20px 0px;
+        img {
+            border-radius: 50%;
+        }
+        
+    }
+    p {
+        color: $primaryLight;
+        font-size: 14px;
+        span {
+            display: flex;
+            flex-flow: column;
+        }
+        i {
+            font-size: 16px;
+            padding-right: 10px;
+        }
+    }
+    .social-section {
+        display: flex;
+        .inner-social {
+            width: 34.1%;
+            @extend .bgChangeHover;
+            @include transition(0.3s);
+        }&:hover p {
+            color: $primaryWhite;
+        }
+    }
+}
+.setting-section {
+    background: $primaryWhite;
+    border-radius: 4px;
+    padding: 0px 0px 0px 0px;
+    border-radius: 7px;
+    color: #333 !important;
+    overflow: hidden;
+    @extend .shadow;
+    .input-section {
+        padding: 20px;
+    }
+
+    .btn-section {
+        display: flex;
+        justify-content: center;
+        button {
+            background: #636363;
+            margin: 10px 6px 0px 7px;
+            width: 90px;
+            height: 43px;
+            @extend .bgChangeHover;
+            @include transition(0.3s);
+        }
+    }
+}
+table {
+    width: 100%;
+}
+  
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+  
+td, th {
+    width: 25%;
+}
+
+tr.mat-row{
+    @extend .bgChangeHover ;
+    @extend .popupHoverEffect ;
+    @include transition(0.3s);
+}
+
+ 
+.tableWrapper{
+    width: 100%;
+    padding: 0px 11px;
+    box-sizing: border-box;
+    .mat-table {
+        background:$primaryWhite !important;
+    }
+    .mat-cell, .mat-footer-cell ,.mat-header-cell, .mat-sort-header-arrow, .mat-paginator, .mat-paginator-page-size .mat-select-trigger,.mat-select-value,
+    .mat-paginator, .mat-paginator-page-size .mat-select-trigger, .mat-select-arrow{
+        color: $primaytext !important;
+    }
+    .mat-sort-header-arrow {
+        color: $primayColor !important;
+    }
+    .tableWrapper, .mat-paginator {
+        background:$primaryWhite !important;
+        border-top: 1px solid #d2d2d2;
+    }
+    .mat-header-row{
+        border-bottom: 2px solid #d2d2d2 !important;    
+    }
+}
+
+.noticiationWrapper{
+    background: $primaryWhite;
+    padding: 0px 11px;
+    @extend .shadow;
+    .media-list{
+        ul,li {
+            margin: 0px;
+            padding: 0px;
+        }
+        li{
+            list-style: none;
+            @extend .bgChangeHover;
+            @extend .popupHoverEffect;
+            @include transition(0.3s);
+            border-bottom: 1px solid #f5f5f4;
+            a{
+                text-decoration:  none !important;
+                color: $primaytext !important;
+            }
+            a.media{
+                text-decoration: none;
+                
+            }
+        }
+        .media {
+            padding: 1.5rem 1.5rem;
+            @include transition(0.3s);
+        }
+        .media {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            p{
+                margin-bottom: 5px;
+            }
+        }
+        .media-single, .media-center-v {
+            -webkit-box-align: center;
+            align-items: center;
+        }
+        .media-body {
+            -ms-flex: 1;
+            flex: 1;
+        }
+        .avatar-lg {
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 1.125rem;
+        }
+        .avatar {
+            position: relative;
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            margin-right: 20px;
+            line-height: 56px;
+            text-align: center;
+            border-radius: 100%;
+            background-color: #f2f2f2;
+            color: $primaryWhite;
+            text-transform: uppercase;
+        }
+    }
+}

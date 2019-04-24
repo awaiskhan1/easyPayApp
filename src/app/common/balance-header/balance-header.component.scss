@@ -1,0 +1,64 @@
+// Variables Names
+// ==============================================================================
+
+@import '../../../constants.scss';
+
+// ==============================================================================
+
+.headerNotify{
+    .balance{
+        background: #000;
+        min-height: 120px;
+        h2{
+            color: #aaa2a2;
+            text-align: center;
+            line-height: 110px;
+            .money{
+                margin-left: 10px;
+                color: $primaryWhite;
+                opacity: 1;
+            }
+        }
+    }
+    .profileWrapper{
+        background: $primayColor;
+        min-height: 120px;
+        padding-top: 28px;
+        & > ul{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            display: flex;
+            width: 100%;
+            line-height: 55px;
+            justify-content: center;
+            li{
+                padding:  5px 10px;
+                i {
+                    font-size: 24px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $primaytext;
+                }
+                .profileImg{
+                    width: 55px;
+                    height: 55px;
+                    display: flex;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &.showLess{
+        .balance{
+            h2{
+                font-size: 20px;
+            }
+        }
+    }
+}

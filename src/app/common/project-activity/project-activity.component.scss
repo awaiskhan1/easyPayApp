@@ -1,0 +1,166 @@
+// Variables Names
+// ==============================================================================
+@import '../../../constants.scss';
+
+// ==============================================================================
+.headerSearch{
+	a,button{
+		&:hover, &:focus{
+			outline: none !important;
+		}
+	}
+	.headerTitle{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		margin-top: 39px;
+		h3{
+			font-size: 30px;
+			margin: 0px;
+			padding: 0px;
+			line-height: 55px;
+		}
+		.rightSection{
+			display: flex;
+			.searchBox{
+				position: relative;
+				input {
+					@extend .input;
+				}
+				i{
+					position: absolute;
+					right: 12px;
+					top: 17px;
+					opacity: 0.5;
+				}
+			}
+			button {
+				background: transparent;
+				color: $primaytext;
+				border-color: $primayColor;
+				font-size: 14px;
+				min-width: 132px;
+				padding: 4px 10px;
+				border-radius: 40px;
+				@include transition(0.3s);
+				@extend .bgChangeHover;
+			}
+		}
+	}
+}
+.background-activity {
+	width: 100%;
+	margin: 10px 0px 20px 0px;
+	min-height: 72px;
+	ul {
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+		li  {
+			font-size: 24px;
+			@extend .shadow;
+			margin-bottom: 15px;
+			background: $primaryWhite;
+			border-radius: 5px;
+			@extend .popupHoverEffect;
+			@extend .bgChangeHover;
+			@include transition(0.3s);
+			&:hover{
+				.sub-wraper{
+					.icon-activity {
+						i {
+							color: $primaytext;
+						}
+					}
+				}
+				.wraper-active{
+					.active-position{
+						border-color: $primayColor;
+					}
+					.statics {
+						.sub-statics{
+							i:hover{
+								background: #fff;
+							}
+						}
+					}
+				}
+			}
+			.sub-wraper {
+				display: flex;
+				.icon-activity {
+					i {
+						@include transition(0.3s);
+						font-size: 32px;
+						padding: 21px 15px 20px 25px;
+						color: $primayColor;
+					}
+				}
+				.sub-text {
+					padding: 10px 0px;
+					span {
+						font-size: 18px;
+						font-weight: bold;
+					}
+					p {
+						font-size: 16px;
+						margin: 0px;	
+					}
+				}
+			}
+			.wraper-active {
+				display: flex;
+				justify-content: space-around;
+				.active-position {
+					border-left: 2px solid #f8f8f8;
+					min-height: 80px;
+					padding: 16px 0px 0px 20px;
+					@include transition(0.3s);
+					.icon-active {
+						display: flex;
+						i {
+							font-size: 13px;
+							color: $primaryGreen;
+							padding-right: 13px;
+							line-height: 48px;
+						}
+						h2 {
+							font-size: 18px;
+							margin: 0px;
+							padding-top: 12px;
+							text-transform: uppercase;
+							color: $primaryGreen;
+						}
+						&.error{
+							i,h2{
+								color: $primaryRed;
+							}
+						}
+						
+					}
+				}
+				.statics {
+
+					.sub-statics {
+						padding-top: 18px;
+						i {
+							border-radius: 50%;
+							border: 1px solid #e9e9e9;;
+							background: transparent;
+							width: 45px;
+							height: 45px;
+							margin-right: 10px;
+							text-align: center;
+							padding-top: 10px;
+							@extend .bgChangeHover;
+							@include transition(0.3s);
+						}
+					}
+				}
+			}
+
+			}	
+		}
+
+}
+

@@ -1,0 +1,63 @@
+<section class="headerNotify showLess">
+	<div class="container-fuild">
+		<div class="row">
+			<article class="col-lg-7 padRight ">
+				<div class="balance">
+					<h2>
+						<span >Balance: </span>
+						<span class="money"> $1,000.00</span>
+					</h2>
+				</div>
+			</article>
+			<article class="col-lg-5 padLeft ">
+				<div class="profileWrapper">
+					<ul>
+						<li>
+							<button mat-icon-button [matMenuTriggerFor]="menu">
+								<i class="far fa-bell"></i>
+								</button>
+								<mat-menu #menu="matMenu" xPosition="before">
+								<button mat-menu-item>
+									<mat-icon>dialpad</mat-icon>
+									<span>Redial</span>
+								</button>
+								<button mat-menu-item disabled>
+									<mat-icon>voicemail</mat-icon>
+									<span>Check voicemail</span>
+								</button>
+								<button mat-menu-item>
+									<mat-icon>notifications_off</mat-icon>
+									<span>Disable alerts</span>
+								</button>
+							</mat-menu>
+						</li>
+						<li>
+							<span class="profileImg" [matMenuTriggerFor]="menuProfile">
+								<img src="../../../assets/profile.jpg" alt="profile image">
+							</span>
+							<mat-menu #menuProfile="matMenu" xPosition="before">
+							<button mat-menu-item>
+								<mat-icon>dialpad</mat-icon>
+								<span>Redial</span>
+							</button>
+							<button mat-menu-item disabled>
+								<mat-icon>voicemail</mat-icon>
+								<span>Check voicemail</span>
+							</button>
+							<button mat-menu-item>
+								<mat-icon>notifications_off</mat-icon>
+								<span>Disable alerts</span>
+							</button>
+							</mat-menu>
+						</li>
+						<li>
+							<a href="javascript:;" (click)="collapse()">
+								<i class="fas fa-align-right"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</article>
+		</div>
+	</div>
+</section>

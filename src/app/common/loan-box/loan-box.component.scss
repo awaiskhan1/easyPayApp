@@ -1,0 +1,82 @@
+// Variables Names
+// ==============================================================================
+@import '../../../constants.scss';
+
+// ==============================================================================
+a,button{
+    &:focus{
+        outline: none !important;
+    }
+}
+.loanWrapper{
+    background: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    overflow: hidden;
+    position: relative;
+    @extend .shadow;
+    @extend .popupHoverEffect;
+    @extend .bgChangeHover;
+    @include transition(0.3s);
+    &:hover{
+        header{
+            .icon, .percent{
+                color: $primaryWhite;
+            }
+        }
+        footer{
+            button{
+                &:hover{
+                    color : $primaytext !important;
+                    background: $primaryWhite !important; 
+                }
+            }
+        }
+    }
+    header{
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        justify-content: space-between;
+        .icon{
+            @include transition(0.3s);
+            font-size: 40px;
+            color: $primayColor;
+        }
+        .percent{
+            @include transition(0.3s);
+            color:darken($primayColor,10%);
+            font-size: 58px;
+            right: 60px;
+            top: 10px;
+            position: absolute;
+            font-weight: bold;
+        }
+    }
+    .descriptionWp{
+        width: 100%;
+        .title{
+            font-size: 24px;
+            margin-bottom: 10px;
+            color : $primaytext;
+        }
+        .desc{
+            font-size: 14px;
+            color : lighten($primaytext,30%);
+        }
+    }
+    footer{
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: center;
+        button {
+            background: #636363;
+            margin: 10px 6px 0px 7px;
+            height: 43px;
+            @extend .bgChangeHover;
+            @include transition(0.3s);
+        }
+    }
+}

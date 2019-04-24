@@ -1,0 +1,13 @@
+<article class="loanWrapper">
+	<header>
+		<span class="icon"><i class="fas {{data.icon}}"></i></span>
+		<span class="percent">{{data.percent}}</span>
+	</header>
+	<div class="descriptionWp">
+		<h3 class="title">{{data.title}}</h3>
+		<p class="desc">{{data.description}}</p>
+	</div>
+	<footer>
+		<button mat-raised-button (click)="addCalculationDailog()" color="primary">Calculate Now</button>
+	</footer>
+</article>

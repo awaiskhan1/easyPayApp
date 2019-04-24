@@ -1,0 +1,50 @@
+// Variables Names
+// ==============================================================================
+@import '../../../constants.scss';
+
+// ==============================================================================
+:host{
+    .title{
+        header{
+            font-size: 40px;
+            color: $primaytext;
+        }
+    }
+    .introFigure{
+        margin: 0px;
+        margin-top: 30px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        @extend .shadow;
+        img{
+            width: 100%;
+        }
+    }
+    .tansitionList{
+        background: #fff;
+        min-height: 100vh;
+    }
+    .suboardInnerWrapper{
+        height: 100vh;
+        overflow-y: auto;
+        &::-webkit-scrollbar-track{
+            -webkit-box-shadow: none !important;
+            border-radius: 10px;
+            background-color: transparent !important;
+        }
+        &::-webkit-scrollbar{
+            width: 12px;
+            background-color:  transparent !important;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            -webkit-box-shadow: none !important;
+            background-color: $primayColor !important;
+        }
+
+    }
+}
+
+// ==============================================================================

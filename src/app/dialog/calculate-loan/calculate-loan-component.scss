@@ -1,0 +1,192 @@
+// Variables Names
+// ==============================================================================
+@import '../../../constants.scss';
+
+// ==============================================================================
+a,button{
+    &:focus{
+        outline: none !important;
+    }
+}
+:host{
+    min-width: 100%;
+    display: flex;
+    padding-left: 12px;
+    box-sizing: border-box;
+	padding-right: 12px;
+	.header2{
+		margin-bottom: 20px;
+		h2{
+			font-size: 32px;
+			
+			text-align: left;
+			color:  $primaryWhite;
+		}
+		p{
+			text-align: left;
+		}
+	}
+	.wrapper{
+		width: 100%;
+		.project-container{
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.label-adust{
+		text-align: left !important;
+	}
+	.btn-section {
+		display: flex;
+		justify-content: center;
+		button {
+			background: #636363;
+			margin: 10px 10px 0px 10px;
+			height: 43px;
+			@extend .bgChangeHover;
+			@include transition(0.3s);
+		}
+	}
+	.calculateWrapper{
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		flex-flow: column;
+	}
+	.applySection{
+		text-align: center;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		.apply{
+			padding: 20px;
+			@extend .bgChangeHover;
+			@include transition(0.3s);
+			margin-top: 20px;
+			background: #5b5b5b;
+			display: flex;
+			flex-flow: row;
+			@extend .shadow;
+			width: 480px;
+			border-radius: 8px;
+			justify-content: space-between;
+			&:hover{
+				h2{
+					color: $primaytext !important;
+				}
+				button{
+					&:hover{
+						color : $primaytext !important;
+						background: $primaryWhite !important; 
+					}
+				}
+			}
+			.totalAmount{
+				border-right: 2px solid $primaytext;
+				padding: 0px 20px;
+				display: flex;
+				h2{
+					@include transition(0.3s);
+					color: $primaryWhite !important;
+					display: flex;
+					flex-flow: column;
+					justify-content: center;
+					.small{
+						font-size: 18px;
+						display: block;
+					}
+					.big{
+						font-size: 32px;
+					}
+				}
+			}
+			.priceApply{
+				display: flex;
+				flex-flow: column;
+				.amontRate{
+					display: flex;
+					padding: 0px 10px;
+					flex-flow: row;
+					justify-content: space-around;
+					h2{
+						@include transition(0.3s);
+						color: $primaryWhite !important;
+						padding: 20px 15px;
+						.small{
+							font-size: 16px;
+							display: block;
+						}
+						.big{
+							font-size: 26px;
+						}
+					}
+				}
+			}
+		}
+	}
+	::ng-deep .mat-focused .mat-form-field-label {
+		/*change color of label*/
+		color: $primayColor !important;
+	}
+	::ng-deep mat-slider{
+		width: 100%;
+	}
+	::ng-deep mat-form-field {
+		// color: $primaytext !important;
+		// background: #e4e4e4;
+		width: 100%;
+		border-radius: 4px;
+		.mat-form-field-label{
+			//color: $primaytext !important;
+			
+		}
+		input, textarea, mat-select, mat-option {
+			color: $primaytext !important;
+		}
+		input {
+			
+			
+		}
+		.mat-form-field-appearance-legacy{
+			.mat-form-field-underline {
+				
+			}
+		} 
+		.matInput {
+			border: 1px solid yellow;	
+		}
+		.mat-form-field-appearance-legacy .mat-form-field-underline{
+			background-color: yellow !important;
+		}
+		.mat-form-field-appearance-outline .mat-form-field-outline {
+			color: black;
+		  }
+	}
+	::ng-deep .mat-input-element {
+		color: #e4e4e4 !important;
+	}
+	::ng-deep .mat-form-field-underline{
+		background:  rgb(124, 124, 124) !important;
+	} ::ng-deep .mat-form-field-ripple {
+		background-color: yellow !important;
+	  }
+	
+	.title{
+		font-size: 22px;
+		border-bottom: 1px solid #e7e7e7;
+		margin-bottom: 20px;
+		padding-bottom: 13px;
+		font-weight: bold;
+	}
+}
+.project-container{
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+		
+		
+	
+}

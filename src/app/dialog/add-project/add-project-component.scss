@@ -1,0 +1,107 @@
+// Variables Names
+// ==============================================================================
+@import '../../../constants.scss';
+
+// ==============================================================================
+
+:host{
+	min-width: 600px;
+	display: flex;
+	::ng-deep mat-form-field {
+		// color: $primaytext !important;
+		// background: #e4e4e4;
+		border-radius: 4px;
+		.mat-form-field-label{
+			//color: $primaytext !important;
+			
+		}
+		input, textarea, mat-select, mat-option {
+			color: $primaytext !important;
+		}
+		input {
+			
+			
+		}
+		.mat-form-field-appearance-legacy{
+			.mat-form-field-underline {
+				
+			}
+		} 
+		.matInput {
+			border: 1px solid yellow;	
+		}
+		.mat-form-field-appearance-legacy .mat-form-field-underline{
+			background-color: yellow !important;
+		}
+		.mat-form-field-appearance-outline .mat-form-field-outline {
+			color: black;
+		  }
+	}
+	::ng-deep mat-radio-group  {
+		display: flex;
+		flex-flow: column;
+	}
+	::ng-deep mat-checkbox {
+		padding: 0px 10px;
+		.mat-checkbox-background {
+			border: 1px solid #e4e4e4;
+		}
+		
+	}
+	::ng-deep .mat-input-element {
+		color: #e4e4e4 !important;
+	}
+	::ng-deep .mat-form-field-underline{
+		background:  rgb(124, 124, 124) !important;
+	} ::ng-deep .mat-form-field-ripple {
+		background-color: yellow !important;
+	  }
+	
+	.title{
+		font-size: 22px;
+		border-bottom: 1px solid #e7e7e7;
+		margin-bottom: 20px;
+		padding-bottom: 13px;
+		font-weight: bold;
+	}
+	section.wrapper{
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+		
+	}
+}
+.project-container{
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+		.example-section {
+			margin: 10px 0px;
+		}
+		.btn-section {
+			display: flex;
+			justify-content: center;
+			button {
+				background: #636363;
+				margin: 10px 6px 0px 7px;
+				width: 90px;
+				height: 43px;
+				@extend .bgChangeHover;
+				@include transition(0.3s);
+			}
+		}
+		.check-wrap {
+			display: flex;
+			
+			.active-disavctive {
+				margin: 10px 0px;
+				width: 50%;
+				.label-adust {
+					display: flex;
+					 
+				}
+			}
+		}
+		
+	
+}

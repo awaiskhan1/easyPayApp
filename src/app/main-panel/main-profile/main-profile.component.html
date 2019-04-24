@@ -1,0 +1,177 @@
+<section class="profile-wrap">
+	<article class="sub-wrap">
+		<div class="container-fluid">
+			<div class="row">
+				<article class="title col-md-12 ">
+					<header>Profile</header>
+				</article>
+				<div class="col-md-4">
+					<div class="user-section">
+						<h2>{{currentUser.firstName}}</h2>
+						<h3>{{currentUser.professione}}</h3>
+						<div class="user-img-section">
+							<img src="../../../assets/user.jpg">
+						</div>
+						<p>{{currentUser.address}}<span>{{currentUser.detailAddress}}</span></p>
+						<p><i class="fas fa-phone"></i>{{currentUser.phone}}</p>
+						<p><i class="fas fa-at"></i>{{currentUser.email}}</p>
+						<div class="social-section">
+							<div class="inner-social">
+								<h2>564</h2>
+								<p>Following</p>
+							</div>
+							<div class="inner-social">
+								<h2>18K</h2>
+								<p>Followers</p>
+							</div>
+							<div class="inner-social">
+								<h2>565</h2>
+								<p>Post</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<section class="setting-section">
+						<mat-tab-group>
+							<mat-tab>
+								<ng-template mat-tab-label>
+									<i class="fas fa-chart-bar"></i> Statics
+								</ng-template>
+								
+								<section class="tableWrapper">
+									<!-- <mat-form-field>
+										<input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+									</mat-form-field> -->
+										
+									<div class="mat-elevation-z8">
+										<table mat-table [dataSource]="dataSource" matSort>
+										
+											<!-- ID Column -->
+											<ng-container matColumnDef="id">
+											<th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+											<td mat-cell *matCellDef="let row"> {{row.id}} </td>
+											</ng-container>
+										
+											<!-- Progress Column -->
+											<ng-container matColumnDef="progress">
+											<th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
+											<td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
+											</ng-container>
+										
+											<!-- Name Column -->
+											<ng-container matColumnDef="name">
+											<th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+											<td mat-cell *matCellDef="let row"> {{row.name}} </td>
+											</ng-container>
+										
+											<!-- Color Column -->
+											<ng-container matColumnDef="color">
+											<th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>
+											<td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </td>
+											</ng-container>
+										
+											<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+											<tr mat-row *matRowDef="let row; columns: displayedColumns;">
+											</tr>
+										</table>
+										
+										<mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+									</div>
+											  
+								</section>
+							</mat-tab>
+
+							<mat-tab>
+								<ng-template mat-tab-label>
+									<i class="fas fa-cogs"></i> Setting
+								</ng-template>
+								<section class="input-section">
+									<mat-form-field>
+										<input class="adjustment" [(ngModel)]="firstName" matInput placeholder="First name">
+									</mat-form-field>
+									<mat-form-field>
+										<input class="adjustment" [(ngModel)]="professione" matInput placeholder="Professione">
+									</mat-form-field>
+									<mat-form-field>
+										<textarea matInput placeholder="Address 1" [(ngModel)]="address"></textarea>
+									</mat-form-field>
+									<mat-form-field>
+										<textarea matInput placeholder="Address 2" [(ngModel)]="detailAddress"></textarea>
+									</mat-form-field>
+									<mat-form-field>
+										<input class="adjustment" [(ngModel)]="phone" matInput placeholder="Phone">
+									</mat-form-field>
+									<mat-form-field>
+										<input matInput [(ngModel)]="email" placeholder="Email">
+									</mat-form-field>
+									<section class="btn-section">
+										<button mat-raised-button (click)="update()" color="primary">Update</button>
+									</section>
+								</section>
+							</mat-tab>
+
+							<mat-tab>
+								<ng-template mat-tab-label>
+									<i class="far fa-bell"></i> Notifications
+								</ng-template>
+								<section class="noticiationWrapper">
+									<div class="media-list media-list-hover">
+										<ul>
+											<li>
+												<a class="media media-single" href="javascript:;">
+													<span class="avatar avatar-lg bg-primary"><i class="fa fa-user"></i></span>
+													<div class="media-body">
+													<p>Pellentesque rhoncus ipsum vel mauris sagittis, vulputate semper arcu consectetur.</p>
+													<span>55 min ago</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a class="media media-single" href="javascript:;">
+													<span class="avatar avatar-lg bg-success"><i class="fas fa-dollar-sign"></i></span>
+													<div class="media-body">
+													<p>Pellentesque blandit odio id felis semper, imperdiet sagittis purus tincidunt.</p>
+													<span>23 hours ago</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a class="media media-single" href="javascript:;">
+													<span class="avatar avatar-lg bg-danger"><i class="fas fa-chart-line"></i></span>
+													<div class="media-body">
+													<p>Suspendisse elementum velit vitae mi vestibulum ornare id vel urna.</p>
+													<span>5 hours ago</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a class="media media-single" href="javascript:;">
+													<span class="avatar avatar-lg bg-success"><i class="fa fa-star"></i></span>
+													<div class="media-body">
+													<p>Aenean tincidunt tortor sit amet erat rutrum, vel condimentum ipsum gravida.</p>
+													<span>Yesterday</span>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a class="media media-single" href="javascript:;">
+													<span class="avatar avatar-lg bg-secondary"><i class="fa fa-user"></i></span>
+													<div class="media-body">
+													<p>Vivamus condimentum erat non turpis placerat, at volutpat metus commodo.</p>
+													<span>55 min ago</span>
+													</div>
+												</a>
+											</li>
+										</ul>		
+									</div>
+								</section>
+							</mat-tab>
+						</mat-tab-group>
+					</section>
+				</div>
+			</div>
+		</div>
+	</article>
+</section>
